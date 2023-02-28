@@ -5,8 +5,13 @@
 ## Makefile
 ##
 
-SRC	=	src/err_handling/err_handling.c	\
-		src/err_handling/can_open_and_read.c
+SRC	=	src/file_managing/open_file.c	\
+		src/file_managing/free_array.c	\
+		src/file_managing/convert_str_to_arr.c	\
+		src/err_handling/err_handling.c	\
+		src/err_handling/can_open_and_read.c	\
+		src/err_handling/file_is_empty.c	\
+		src/err_handling/same_lines_size.c
 
 MAIN = src/main.c
 

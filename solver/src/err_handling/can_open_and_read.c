@@ -18,12 +18,12 @@ int can_open_and_read(char *file)
     char *buffer;
 
     if (fd == -1 || stat(file, &stats) == -1)
-        return (84);
+        return (0);
     buffer = malloc(sizeof(char) * (stats.st_size + 1));
     if (read(fd, buffer, stats.st_size) == -1){
         free(buffer); close(fd);
-        return (84);
+        return (0);
     }
     close(fd); free(buffer);
-    return (0);
+    return (1);
 }
