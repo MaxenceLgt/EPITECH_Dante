@@ -5,7 +5,8 @@
 ## Makefile
 ##
 
-SRC	=
+SRC	=	src/err_handling/err_handling.c	\
+		src/err_handling/can_open_and_read.c
 
 MAIN = src/main.c
 
