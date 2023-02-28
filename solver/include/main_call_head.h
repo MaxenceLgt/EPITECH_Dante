@@ -9,5 +9,6 @@
     #define MAIN_CALL_HEAD_
 
     int err_handling(int ac, char **av);
+    int exec_resolution(char **maze, int max_l, int max_r);
 
 #endif /* !MAIN_CALL_HEAD_ */
