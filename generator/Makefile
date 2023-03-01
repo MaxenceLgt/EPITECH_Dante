@@ -5,15 +5,17 @@
 ## Makefile
 ##
 
-SRC	=
+SRC	=	src/err_handling/err_handling.c	\
+		src/err_handling/is_number.c
 
 MAIN = src/main.c
 
-INCLUDE = include/
+INCLUDE = include/	\
+		lib/mlgt_headers/
 
 NAME	=	generator
 
-CFLAGS = $(INCLUDE:%=-I%)
+CFLAGS = $(INCLUDE:%=-I%) -g
 
 OBJ	=	$(SRC:.c=.o)
 
@@ -22,12 +24,15 @@ OBM =	$(MAIN:.c=.o)
 all:	$(NAME)
 
 $(NAME):	$(OBJ) $(OBM)
-	gcc -o $(NAME) $(OBJ) $(OBM) -g
+	make -C lib/
+	gcc -o $(NAME) $(OBJ) $(OBM) -Llib/ -lmlgt -lmlpf
 
 clean:
+	make clean -C lib/
 	rm -f $(OBJ) $(OBM)
 
 fclean:	clean
+	make fclean -C lib/
 	rm -f $(NAME)
 
 re: fclean all

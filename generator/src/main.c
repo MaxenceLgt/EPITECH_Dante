@@ -9,7 +9,7 @@
 
 int main(int ac, char **av)
 {
-    (void)ac;
-    (void)av;
+    if (err_handling(ac - 1, &av[1]) == 84)
+        return (84);
     return (0);
 }
