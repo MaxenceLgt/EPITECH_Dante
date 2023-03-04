@@ -23,7 +23,7 @@ int display_int_map(m_map *s_map)
 int display_str_map(m_map *s_map)
 {
     for (int x = 0; x < s_map->max_x; x++){
-        printf("%s\n", s_map->maze_int[x]);
+        printf("%s\n", s_map->maze_map[x]);
     }
     return (0);
 }

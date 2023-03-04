@@ -13,6 +13,11 @@
 int exec_resolution(m_map *s_map)
 {
     exec_int_resolution(s_map, 0, 0, 1);
-    display_int_map(s_map);
+    if (BEG == -1 || END == -1 || END == 0) {
+        printf("no solution found\n");
+        return (0);
+    }
+    display_solution(s_map, MAX_X - 1, MAX_Y - 1);
+    display_str_map(s_map);
     return (0);
 }

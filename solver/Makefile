@@ -17,7 +17,9 @@ SRC	=	src/file_managing/open_file.c	\
 		src/err_handling/same_lines_size.c	\
 		src/err_handling/good_line_content.c	\
 		src/resolution_algo/exec_resolution.c	\
-		src/resolution_algo/exec_int_resolution.c
+		src/resolution_algo/exec_int_resolution.c	\
+		src/resolution_algo/display_solution.c	\
+		src/resolution_algo/go_next_ways.c
 
 MAIN = src/main.c
 
