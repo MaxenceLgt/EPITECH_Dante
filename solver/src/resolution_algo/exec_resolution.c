@@ -7,10 +7,12 @@
 
 #include <string.h>
 #include <stdio.h>
+#include "define_header.h"
+#include "exec_solver_head.h"
 
-int exec_resolution(char **maze, int max_l, int max_r)
+int exec_resolution(m_map *s_map)
 {
-    if (maze[0][0] == 'X' || maze[max_l][max_r] == 'X')
-        printf("no solution found\n");
+    exec_int_resolution(s_map, 0, 0, 1);
+    display_int_map(s_map);
     return (0);
 }
