@@ -19,7 +19,8 @@ SRC	=	src/file_managing/open_file.c	\
 		src/resolution_algo/exec_resolution.c	\
 		src/resolution_algo/exec_int_resolution.c	\
 		src/resolution_algo/display_solution.c	\
-		src/resolution_algo/go_next_ways.c
+		src/resolution_algo/go_next_ways.c	\
+		src/resolution_algo/free_struct_elms.c
 
 MAIN = src/main.c
 
@@ -27,7 +28,7 @@ INCLUDE = include/
 
 NAME	=	solver
 
-CFLAGS = $(INCLUDE:%=-I%) -g
+CFLAGS = $(INCLUDE:%=-I%) -g -Wall -Wextra
 
 OBJ	=	$(SRC:.c=.o)
 

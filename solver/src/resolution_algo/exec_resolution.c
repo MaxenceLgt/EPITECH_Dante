@@ -19,5 +19,6 @@ int exec_resolution(m_map *s_map)
     }
     display_solution(s_map, MAX_X - 1, MAX_Y - 1);
     display_str_map(s_map);
+    free_struct_elms(s_map);
     return (0);
 }

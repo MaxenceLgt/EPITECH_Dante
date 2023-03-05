@@ -14,7 +14,7 @@ static int count_malloc(char *buf)
     char *word = NULL;
     int nb_malloc = 0;
 
-    while (word = __strtok_r(temp, "\n", &temp))
+    while ((word = __strtok_r(temp, "\n", &temp)))
         nb_malloc++;
     return (nb_malloc);
 }
@@ -27,7 +27,7 @@ char **convert_str_to_arr(char *buf)
     int pos = 0;
     char *word = NULL;
 
-    while (word = __strtok_r(temp, "\n", &temp)){
+    while ((word = __strtok_r(temp, "\n", &temp))){
         arr_buf[pos] = strdup(word);
         pos++;
     }

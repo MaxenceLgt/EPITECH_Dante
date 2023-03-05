@@ -18,5 +18,6 @@
     int go_right(m_map *s_map, int pos_x, int pos_y);
     int go_top(m_map *s_map, int pos_x, int pos_y);
     int go_bottom(m_map *s_map, int pos_x, int pos_y);
+    void free_struct_elms(m_map *s_map);
 
 #endif /* !EXEC_SOLVER_ */
