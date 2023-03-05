@@ -15,7 +15,9 @@ int err_handling(int ac, char **av)
         return (84);
     if (file_is_empty(av[1]))
         return (84);
-    if (!same_lines_size(av[1]))
+    if (!check_line_size(av[1]))
+        return (84);
+    if (!check_line_content(av[1]))
         return (84);
     return (0);
 }
