@@ -38,4 +38,12 @@
     */
     int check_line_size(char *file);
 
+    /*
+    @brief check_last_elm verify if the last elm of the a is a '\\n'
+    or not
+    @param file: The file you want to verify
+    @returns 1 If it is. 0 If not
+    */
+    int check_last_elm(char *file);
+
 #endif /* !ERR_HANDLING_HEAD_ */

@@ -17,6 +17,8 @@ int err_handling(int ac, char **av)
         return (84);
     if (!check_line_size(av[1]))
         return (84);
+    if (check_last_elm(av[1]))
+        return (84);
     if (!check_line_content(av[1]))
         return (84);
     return (0);

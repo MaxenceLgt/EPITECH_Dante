@@ -7,7 +7,7 @@
 
 #include "define_header.h"
 #include "map_struct.h"
-#include "define_header.h"
+#include "exec_solver_head.h"
 
 static int apply_recursive(m_map *s_map, int pos_x, int pos_y, int val)
 {

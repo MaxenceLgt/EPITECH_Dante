@@ -17,6 +17,7 @@ SRC	=	src/file_managing/open_file.c	\
 		src/err_handling/check_line_size.c	\
 		src/err_handling/check_line_content.c	\
 		src/err_handling/good_line_content.c	\
+		src/err_handling/check_last_elm.c	\
 		src/resolution_algo/exec_resolution.c	\
 		src/resolution_algo/exec_int_resolution.c	\
 		src/resolution_algo/display_solution.c	\
