@@ -37,6 +37,10 @@
     */
     void create_map_struct(m_map *s_map, char *file);
 
+    /*
+    @brief increase_stack function increase the stack if the x and y
+    size of the maze are superior to 3000.
+    */
     void increase_stack(void);
 
 #endif /* !MAIN_CALL_HEAD_ */
