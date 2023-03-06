@@ -13,6 +13,10 @@ int generate_maze_line(int x, int y)
         for (int i = 0; i < x; i++){
             printf("*");
         }
+    } else {
+        for (int i = 1; i < y; i++)
+            printf("*\n");
+        printf("*");
     }
     return (0);
 }
