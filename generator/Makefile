@@ -6,7 +6,10 @@
 ##
 
 SRC	=	src/err_handling/err_handling.c	\
-		src/err_handling/is_number.c
+		src/err_handling/is_number.c	\
+		src/stack_managing/increase_stack.c	\
+		src/maze_generating/line_generating/generate_maze_line.c	\
+
 
 MAIN = src/main.c
 

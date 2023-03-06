@@ -6,7 +6,7 @@
 */
 
 #include <string.h>
-#include "err_handling_head.h"
+#include "gen_err_handling_head.h"
 
 int err_handling(int ac, char **av)
 {
