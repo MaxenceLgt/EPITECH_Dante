@@ -16,6 +16,8 @@ int main(int ac, char **av)
     if (err_handling(ac, av) == 84)
         return (84);
     create_map_struct(s_map, av[1]);
+    if (s_map->max_x > 3000 && s_map->max_y > 3000)
+        increase_stack();
     exec_resolution(s_map);
     return (0);
 }

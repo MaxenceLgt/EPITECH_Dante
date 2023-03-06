@@ -37,4 +37,6 @@
     */
     void create_map_struct(m_map *s_map, char *file);
 
+    void increase_stack(void);
+
 #endif /* !MAIN_CALL_HEAD_ */

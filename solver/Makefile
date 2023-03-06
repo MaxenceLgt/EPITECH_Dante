@@ -21,7 +21,8 @@ SRC	=	src/file_managing/open_file.c	\
 		src/resolution_algo/exec_int_resolution.c	\
 		src/resolution_algo/display_solution.c	\
 		src/resolution_algo/go_next_ways.c	\
-		src/resolution_algo/free_struct_elms.c
+		src/resolution_algo/free_struct_elms.c	\
+		src/stack_managing/increase_stack.c
 
 MAIN = src/main.c
 
