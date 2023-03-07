@@ -9,10 +9,16 @@
 
 void increase_stack(void)
 {
+    __u_long size = 256L * 1024L * 1024L;
     struct rlimit r_lim;
 
-    if (getrlimit(RLIMIT_STACK, &r_lim))
+    if (getrlimit(RLIMIT_STACK, &r_lim)){
         return;
-    r_lim.rlim_cur = r_lim.rlim_max;
-    setrlimit(RLIMIT_STACK, &r_lim);
+    }
+    if (r_lim.rlim_cur < size){
+        r_lim.rlim_cur = size;
+        setrlimit(RLIMIT_STACK, &r_lim);
+        return;
+    }
+    return;
 }
