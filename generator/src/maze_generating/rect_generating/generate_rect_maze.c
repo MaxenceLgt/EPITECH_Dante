@@ -8,7 +8,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "gen_rect_gen_head.h"
-#include "gen_link_list_head.h"
 
 int generate_rect_maze(int ac, char **av)
 {
@@ -16,5 +15,6 @@ int generate_rect_maze(int ac, char **av)
     m_list *pos = NULL;
 
     init_linked_list(0, 0, &pos);
+    exec_recursive_gen(&pos, maze);
     return (0);
 }

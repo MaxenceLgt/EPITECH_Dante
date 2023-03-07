@@ -12,7 +12,10 @@ SRC	=	src/err_handling/err_handling.c	\
 		src/maze_generating/line_generating/generate_maze_line.c	\
 		src/maze_generating/gen_struct_handling/create_struct_maze.c	\
 		src/maze_generating/gen_struct_handling/gen_map_maze.c	\
-		src/maze_generating/rect_generating/generate_rect_maze.c
+		src/maze_generating/rect_generating/generate_rect_maze.c	\
+		src/maze_generating/rect_generating/exec_recursive_gen.c	\
+		src/maze_generating/rect_generating/check_valid_next.c	\
+		src/maze_generating/rect_generating/go_random_pos.c
 
 MAIN = src/main.c
 
