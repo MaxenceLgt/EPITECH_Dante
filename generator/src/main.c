@@ -14,6 +14,7 @@ int main(int ac, char **av)
     if (err_handling(ac - 1, &av[1]) == 84)
         return (84);
     if (strcmp("1", av[1]) == 0 || strcmp("1", av[2]) == 0)
-        generate_maze_line(atoi(av[1]), atoi(av[2]));
+        return (generate_maze_line(atoi(av[1]), atoi(av[2])));
+    generate_rect_maze(ac - 1, &av[1]);
     return (0);
 }

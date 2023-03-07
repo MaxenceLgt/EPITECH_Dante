@@ -26,4 +26,14 @@
     */
     int generate_maze_line(int x, int y);
 
+    /*
+    @brief generate_rect_maze is a function that generate a maze
+    perfect if it is precised, with given x and y size.
+    @param ac: Number of arguments (2 if perfect is not precised)
+    @param av: Name of arguments;
+    @return generate_rect_maze return 0 to say that the program
+    is well passed here.
+    */
+    int generate_rect_maze(int ac, char **av);
+
 #endif /* !MAIN_CALL_HEAD_ */
