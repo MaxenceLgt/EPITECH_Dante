@@ -14,7 +14,8 @@
 
     m_maze *create_struct_maze(int ac, char **av);
     int exec_recursive_gen(m_list **list, m_maze *maze);
-    bool check_valid_next(m_list **list, m_maze *maze);
-    void go_rpos(m_list **list, m_maze *maze);
+    bool check_valid_next(m_maze *maze, int *x, int *y);
+    void go_rpos(m_maze *maze, int *x, int *y);
+    void display_map(m_maze *maze);
 
 #endif /* !GEN_RECT_GEN_HEAD_ */

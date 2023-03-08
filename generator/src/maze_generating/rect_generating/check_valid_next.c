@@ -10,15 +10,15 @@
 #include "gen_link_list_ways.h"
 #include "gen_struct_maze.h"
 
-bool check_valid_next(m_list **list, m_maze *maze)
+bool check_valid_next(m_maze *maze, int *x, int *y)
 {
-    if ((*list)->y - 2 >= 0 && NEXT_YM == 'X')
+    if ((*y) - 2 >= 0 && NEXT_YM == 'X')
         return (true);
-    if ((*list)->y + 2 < maze->y && NEXT_YP == 'X')
+    if ((*y) + 2 < maze->y && NEXT_YP == 'X')
         return (true);
-    if ((*list)->x - 2 >= 0 && NEXT_XM == 'X')
+    if ((*x) - 2 >= 0 && NEXT_XM == 'X')
         return (true);
-    if ((*list)->x + 2 < maze->x && NEXT_XP == 'X')
+    if ((*x) + 2 < maze->x && NEXT_XP == 'X')
         return (true);
     return (false);
 }

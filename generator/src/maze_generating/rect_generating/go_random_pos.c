@@ -11,42 +11,42 @@
 #include "gen_link_list_head.h"
 #include "gen_rect_gen_head.h"
 
-static void go_rpos_two(m_list **list, m_maze *maze, int my_r)
+static void go_rpos_two(m_maze *maze, int *x, int *y, int my_r)
 {
     if (my_r == 3){
-        if ((*list)->x - 2 >= 0 && NEXT_XM == 'X'){
-            maze->maze[(*list)->y][(*list)->x - 1] = '*';
+        if ((*x) - 2 >= 0 && NEXT_XM == 'X'){
+            maze->maze[(*y)][(*x) - 1] = '*';
             NEXT_XM = '*';
-            (*list)->x -= 2;
+            (*x) -= 2;
         }
     }
     if (my_r == 4){
-        if ((*list)->x + 2 < maze->x && NEXT_XP == 'X'){
-            maze->maze[(*list)->y][(*list)->x + 1] = '*';
+        if ((*x) + 2 < maze->x && NEXT_XP == 'X'){
+            maze->maze[(*y)][(*x) + 1] = '*';
             NEXT_XP = '*';
-            (*list)->x += 2;
+            (*x) += 2;
         }
     }
 }
 
-void go_rpos(m_list **list, m_maze *maze)
+void go_rpos(m_maze *maze, int *x, int *y)
 {
     int my_r = rand() % 4;
     my_r += 1;
 
     if (my_r == 1){
-        if ((*list)->y - 2 >= 0 && NEXT_YM == 'X'){
-            maze->maze[(*list)->y - 1][(*list)->x] = '*';
+        if ((*y) - 2 >= 0 && NEXT_YM == 'X'){
+            maze->maze[(*y) - 1][(*x)] = '*';
             NEXT_YM = '*';
-            (*list)->y -= 2;
+            (*y) -= 2;
         }
     }
     if (my_r == 2){
-        if ((*list)->y + 2 < maze->y && NEXT_YP == 'X'){
-            maze->maze[(*list)->y + 1][(*list)->x] = '*';
+        if ((*y) + 2 < maze->y && NEXT_YP == 'X'){
+            maze->maze[(*y) + 1][(*x)] = '*';
             NEXT_YP = '*';
-            (*list)->y += 2;
+            (*y) += 2;
         }
     }
-    return (go_rpos_two(list, maze, my_r));
+    return (go_rpos_two(maze, x, y, my_r));
 }

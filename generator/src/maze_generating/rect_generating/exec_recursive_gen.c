@@ -14,9 +14,13 @@
 
 int exec_recursive_gen(m_list **list, m_maze *maze)
 {
-    maze->maze[(*list)->y][(*list)->x] = '*';
-    while (check_valid_next(list, maze) == true){
-        go_rpos(list, maze);
+    int x = (*list)->x;
+    int y = (*list)->y;
+
+    maze->maze[x][y] = '*';
+    while (check_valid_next(maze, &x, &y) == true){
+        go_rpos(maze, &x, &y);
+        display_map(maze);
     }
     return (0);
 }
