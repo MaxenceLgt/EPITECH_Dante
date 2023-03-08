@@ -7,6 +7,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include "gen_struct_handling_head.h"
 #include "gen_rect_gen_head.h"
 
 int generate_rect_maze(int ac, char **av)
@@ -19,8 +20,9 @@ int generate_rect_maze(int ac, char **av)
     while (pos != NULL){
         exec_recursive_gen(&pos, maze);
     }
+    modify_if_pair(maze);
     if (maze->perfect == false)
-        return (0);
+        make_it_imperfect(maze);
     display_map(maze);
     return (0);
 }

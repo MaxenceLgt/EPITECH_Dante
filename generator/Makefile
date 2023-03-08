@@ -15,11 +15,13 @@ SRC	=	src/err_handling/err_handling.c	\
 		src/maze_generating/gen_struct_handling/create_struct_maze.c	\
 		src/maze_generating/gen_struct_handling/gen_map_maze.c	\
 		src/maze_generating/gen_struct_handling/display_map.c	\
+		src/maze_generating/gen_struct_handling/modify_if_pair.c	\
 		src/maze_generating/rect_generating/generate_rect_maze.c	\
 		src/maze_generating/rect_generating/exec_recursive_gen.c	\
 		src/maze_generating/rect_generating/check_valid_next.c	\
 		src/maze_generating/rect_generating/go_random_pos.c	\
-		src/maze_generating/rect_generating/more_than_one_way.c
+		src/maze_generating/rect_generating/more_than_one_way.c	\
+		src/maze_generating/rect_generating/make_it_imperfect.c
 
 MAIN = src/main.c
 

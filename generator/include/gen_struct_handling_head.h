@@ -11,5 +11,6 @@
     #include "gen_struct_maze.h"
 
     char **gen_map_maze(m_maze *s_maze);
+    int modify_if_pair(m_maze *maze);
 
 #endif /* !GEN_STRUCT_HANDLING_HEAD_ */

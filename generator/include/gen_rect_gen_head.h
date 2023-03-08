@@ -19,5 +19,6 @@
     void display_map(m_maze *maze);
     bool more_than_one_way(m_maze *maze, int *x, int *y);
     int add_pos_to_list(m_list **list, int x, int y);
+    void make_it_imperfect(m_maze *maze);
 
 #endif /* !GEN_RECT_GEN_HEAD_ */
