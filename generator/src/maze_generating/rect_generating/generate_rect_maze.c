@@ -15,6 +15,12 @@ int generate_rect_maze(int ac, char **av)
     m_list *pos = NULL;
 
     init_linked_list(0, 0, &pos);
-    exec_recursive_gen(&pos, maze);
+    maze->maze[0][0] = '*';
+    while (pos != NULL){
+        exec_recursive_gen(&pos, maze);
+    }
+    if (maze->perfect == false)
+        return (0);
+    display_map(maze);
     return (0);
 }

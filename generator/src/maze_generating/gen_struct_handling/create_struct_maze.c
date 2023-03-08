@@ -16,6 +16,8 @@ m_maze *create_struct_maze(int ac, char **av)
     s_maze->y = atoi(av[1]);
     if (ac == 3)
         s_maze->perfect = true;
+    else
+        s_maze->perfect = false;
     s_maze->maze = gen_map_maze(s_maze);
     return (s_maze);
 }

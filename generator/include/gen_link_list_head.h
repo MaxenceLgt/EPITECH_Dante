@@ -11,5 +11,6 @@
     #include "gen_link_list_ways.h"
 
     void init_linked_list(int x, int y, m_list **pos);
+    void go_next_list(m_list **list);
 
 #endif /* !GEN_LINK_LIST_HEAD_ */

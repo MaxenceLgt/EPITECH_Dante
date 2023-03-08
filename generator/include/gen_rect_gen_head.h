@@ -17,5 +17,7 @@
     bool check_valid_next(m_maze *maze, int *x, int *y);
     void go_rpos(m_maze *maze, int *x, int *y);
     void display_map(m_maze *maze);
+    bool more_than_one_way(m_maze *maze, int *x, int *y);
+    int add_pos_to_list(m_list **list, int x, int y);
 
 #endif /* !GEN_RECT_GEN_HEAD_ */

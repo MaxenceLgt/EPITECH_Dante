@@ -17,10 +17,11 @@ int exec_recursive_gen(m_list **list, m_maze *maze)
     int x = (*list)->x;
     int y = (*list)->y;
 
-    maze->maze[x][y] = '*';
+    go_next_list(list);
     while (check_valid_next(maze, &x, &y) == true){
         go_rpos(maze, &x, &y);
-        display_map(maze);
+        if (more_than_one_way(maze, &x, &y))
+            add_pos_to_list(list, x, y);
     }
     return (0);
 }

@@ -11,8 +11,9 @@
 
 void display_map(m_maze *maze)
 {
-    for (int i = 0; i < maze->y; i++)
+    int i = 0;
+
+    for (; i < maze->y - 1; i++)
         printf("%s\n", maze->maze[i]);
-    printf("\n");
-    usleep(40000);
+    printf("%s", maze->maze[i]);
 }
