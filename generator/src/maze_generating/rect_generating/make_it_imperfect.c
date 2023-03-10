@@ -10,7 +10,7 @@
 
 static void chose_to_break_wall(m_maze *maze, int x, int y)
 {
-    int choice = (rand() % 10) + 1;
+    int choice = (rand() % 4) + 1;
 
     if (choice == 2)
         maze->maze[y][x] = '*';

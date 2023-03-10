@@ -11,12 +11,12 @@
 
 static int apply_recursive(m_map *s_map, int pos_x, int pos_y, int val)
 {
-    if (pos_x > 0)
-        exec_int_resolution(s_map, pos_x - 1, pos_y, val + 1);
-    if (pos_x < MAX_X)
-        exec_int_resolution(s_map, pos_x + 1, pos_y, val + 1);
     if (pos_y < MAX_Y)
         exec_int_resolution(s_map, pos_x, pos_y + 1, val + 1);
+    if (pos_x < MAX_X)
+        exec_int_resolution(s_map, pos_x + 1, pos_y, val + 1);
+    if (pos_x > 0)
+        exec_int_resolution(s_map, pos_x - 1, pos_y, val + 1);
     if (pos_y > 0)
         exec_int_resolution(s_map, pos_x, pos_y - 1, val + 1);
     return (0);
