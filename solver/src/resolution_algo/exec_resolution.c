@@ -13,7 +13,6 @@
 int exec_resolution(m_map *s_map)
 {
     exec_int_resolution(s_map, 0, 0, 1);
-    printf("je sors de la resolution\n");
     if (BEG == -1 || END == -1 || END == 0) {
         printf("no solution found");
         return (0);
